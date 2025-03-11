@@ -17,6 +17,10 @@ test('multiple numbers return their sum', () => {
     expect(add("1,5,6")).toBe(12)
 })
 
-test('New line between the numbers is also a valid seperator', () => {
+test('new line between the numbers is also a valid seperator', () => {
     expect(add("1\n2, 4")).toBe(7)
+})
+
+test('custom delimiter works', () => {
+    expect(add("//;\n1;2")).toBe(3)
 })
