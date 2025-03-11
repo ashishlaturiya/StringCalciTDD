@@ -24,3 +24,11 @@ test('new line between the numbers is also a valid seperator', () => {
 test('custom delimiter works', () => {
     expect(add("//;\n1;2")).toBe(3)
 })
+
+test('throws error when a negative number is present', () => {
+    expect(() => add("1,-2,3")).toThrow("negative numbers not allowed -2")
+})
+
+test('throws error with multiple negative numbers', () => {
+    expect(() => add("1,-2,-3,4")).toThrow("negative numbers not allowed -2,-3")
+})
