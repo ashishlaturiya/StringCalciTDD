@@ -12,3 +12,7 @@ test('single number returns the number itself', () => {
 test('two numbers return their sum', () => {
     expect(add("1,5")).toBe(6)
 })
+
+test('multiple numbers return their sum', () => {
+    expect(add("1,5,6")).toBe(12)
+})
